@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div class="paly" id="off">
+    <img src="http://texttomp3.com/img/bofang.png" class="rota" id="music-iocn" alt="旋转">
+<audio id="audio" src="https://iflytts.oss-cn-qingdao.aliyuncs.com/website/showmusic/%E5%A4%A9%E5%A4%A9%E7%94%9F%E6%B4%BB%E8%B6%85%E5%B8%82/xiaoyan.mp3"  ></audio>
+</div>
+
+<script type="text/javascript">
+ window.onload = function(){
+          (function(){
+                var audio = document.getElementById("audio"); 
+                var musiIocn = document.getElementById("music-iocn");
+                var off = document.getElementById("off");
+
+                off.onclick = function(){
+                    if(off.className == "paly"){  //如果当前播放
+                        audio.pause(); //停止（暂停）
+                        off.className="stop"; //暂停
+                        musiIocn.src = "http://texttomp3.com/img/bofang.png";  //暂停图片
+                        musiIocn.className = " "; //取消图片360旋转CSS3动画
+                    }else if(off.className == "stop"){  //如果当前暂停
+                        audio.play();  //开始播放
+                        off.className="paly";  //开始播放
+                        musiIocn.src = "http://texttomp3.com/img/shouye_bofangaoqiu.png"; //播放图片
+                        musiIocn.className = "rota";  //追加图片360旋转CSS3动画
+                    } 
+               }
+          })();
+
+    }
+</script> 
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/table.css">
+    <script type="text/javascript">
+        window.onload = function(){
+            off.onclick = function(){
+                get
+            }
+                 (function(){
+                       var audio = document.getElementById("audio"); 
+                       var musiIocn = document.getElementById("music-iocn");
+                       var off = document.getElementById("off");
+       
+                       off.onclick = function(){
+                           if(off.className == "paly"){  //如果当前播放
+                               audio.pause(); //停止（暂停）
+                               off.className="stop"; //暂停
+                               musiIocn.src = "http://texttomp3.com/img/bofang.png";  //暂停图片
+                               musiIocn.className = " "; //取消图片360旋转CSS3动画
+                           }else if(off.className == "stop"){  //如果当前暂停
+                               audio.play();  //开始播放
+                               off.className="paly";  //开始播放
+                               musiIocn.src = "http://texttomp3.com/img/shouye_bofangaoqiu.png"; //播放图片
+                               musiIocn.className = "rota";  //追加图片360旋转CSS3动画
+                           } 
+                      }
+                 })();
+           }
+       </script> 
+    <script>
+        document.getElementById("Audio").play();
+    </script>
+    <style>
+    audio {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        margin: 0;
+    }
+    </style>
+</head>
+<body>
+    <h1 align="center">五十音（平假名）</h1>
+    <div align="center">
+        <table class="pure-table pure-table-horizontal" width=500px>
+            <tr>
+                <td></td>
+                <td class="paly" id="off">
+                    aあ
+                    <audio id="audio" src="audio/a.mp3"  ></audio>
+                </td>
+                <td>iい</td>
+                <td>uう</td>
+                <td>eえ</td>
+                <td>oお</td>
+            </tr>
+            <tr>
+                <td>aあ</td>
+                <td>aあ</td>
+                <td>iい</td>
+                <td>uう</td>
+                <td>eえ</td>
+                <td>oお</td>
+            </tr>
+            <tr>
+                <td>kか</td>
+                <td>kaか</td>
+                <td>kiき</td>
+                <td>kuき</td>
+                <td>keけ</td>
+                <td>koこ</td>
+            </tr>
+            <tr>
+                <td>sさ</td>
+                <td>saさ</td>
+                <td>shiし</td>
+                <td>suす</td>
+                <td>seせ</td>
+                <td>soそ</td>
+            </tr>
+            <tr>
+                <td>tた</td>
+                <td>taた</td>
+                <td>chiち</td>
+                <td>tsuつ</td>
+                <td>teて</td>
+                <td>toと</td>
+            </tr>
+            <tr>
+                <td>nな</td>
+                <td>naな</td>
+                <td>niに</td>
+                <td>nuぬ</td>
+                <td>neね</td>
+                <td>noの</td>
+            </tr>
+            <tr>
+                <td>hは</td>
+                <td>haは</td>
+                <td>hiひ</td>
+                <td>fuふ</td>
+                <td>heへ</td>
+                <td>hoほ</td>
+            </tr>
+            <tr>
+                <td>mま</td>
+                <td>maま</td>
+                <td>miみ</td>
+                <td>muむ</td>
+                <td>meめ</td>
+                <td>moも</td>
+            </tr>
+            <tr>
+                <td>yや</td>
+                <td>yaや</td>
+                <td>(i)い</td>
+                <td>yuゆ</td>
+                <td>(e)え</td>
+                <td>yoよ</td>
+            </tr>
+            <tr>
+                <td>rら</td>
+                <td>raら</td>
+                <td>riり</td>
+                <td>ruる</td>
+                <td>reれ</td>
+                <td>roろ</td>
+            </tr>
+            <tr>
+                <td>wわ</td>
+                <td>waわ</td>
+                <td>(i)い</td>
+                <td>(u)う</td>
+                <td>(e)え</td>
+                <td>(o)お</td>
+            </tr><tr>
+                <td> </td>
+                <td>n</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            </table>
+    </div>
+</body>
+</html>
